@@ -1,0 +1,37 @@
+{
+    "manifest_version":3,
+    "name": "myQuotesExtension",
+    "version": "1.0",
+
+    "description": "An Extension to present a random famous quote!",
+  
+    "icons":{
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+  
+    "action":{
+        "default_icon": { 
+        "16": "icon.png",
+        "24": "icon.png",
+        "32": "icon.png"
+      },
+      "default_title": "Click Me", 
+      
+      "default_popup": "popup.html"
+    },
+
+    "host_permissions": [
+        "http://api.forismatic.com/*"
+      ],
+      
+    "content_scripts": [
+        {
+          "matches": ["http://api.forismatic.com/*"],
+          "css": ["style.css"],
+          "js": ["popup.js"]
+        }
+    ]
+    }
