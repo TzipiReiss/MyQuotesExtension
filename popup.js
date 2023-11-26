@@ -1,4 +1,4 @@
-var api = "http://api.forismatic.com/api/1.0/?&method=getQuote&format=json&lang=en"
+var api = "https://api.forismatic.com/api/1.0/?&method=getQuote&format=json&lang=en"
 
 function getQuoteFromAPI(callback) {
     fetch(api, { "mode": "no-cors" })
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var button = document.getElementById('generate');
 
     function setDataToDOM(data) {
-        console.log(data);
         quote.innerHTML = data.quoteText;
         author.innerHTML = data.quoteAuthor;
     }
